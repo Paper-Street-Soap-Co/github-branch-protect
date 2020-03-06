@@ -1,0 +1,15 @@
+{
+    "secret_name": "github-protect-branch",
+    "branch_protections": {
+        "strict": true,
+        "enforce_admins": true,
+        "dismiss_stale_reviews": true,
+        "require_code_owner_reviews": true,
+        "required_approving_review_count": 2,
+        "contexts": ["test"],
+        "dismissal_users": ["cvega"],
+        "dismissal_teams": [],
+        "user_push_restrictions": [],
+        "team_push_restrictions": []
+    }
+}
