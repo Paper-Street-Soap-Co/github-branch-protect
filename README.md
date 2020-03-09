@@ -9,7 +9,7 @@
 
 Github Branch Protect Microservice with Google Cloud Functions
 
-## Keep branches protected from start!
+## Keep branches protected from the start!
 
 Automatically protect Github's default branch upon repository creation and creates an issue informing users what protections have been automatically set. This is useful for GitHub administrators looking to enforce specific repository protections for their teams and users while providing sensible defaults for organizational governance.
 
@@ -68,7 +68,7 @@ This is a serverless webhook function. The service performs the following operat
 
 7. Create a Google Cloud Function (update `--project`, `--region`, `--service-account`, and `--source` to match your settings)
     * ```sh
-      gcloud functions deploy github-branch-protecth \
+      gcloud functions deploy github-branch-protect \
         --project=github-branch-protect \
         --region=us-central1 \
         --runtime=python37 \
