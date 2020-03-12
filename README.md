@@ -103,6 +103,25 @@ The deploy job depends on the build/test job passing and the `master` branch
 ### Example Issue
 You can see an example issue [here](https://github.com/Paper-Street-Soap-Co/github-branch-protect-example/issues/1) for the paper street soap co organization. The user is given an **@mention**, assigned, and given a detailed explanation of the protections and their settings with additional links to documentation if they'd like further details.
 
+### Self retrospective:
+#### The Good:
+* Meets requirements
+* Code coverage at the unit level is 100%
+* Basic CI/CD capabilities with GitHub Actions
+* Serverless
+* Cheap
+* Uses a recommended library: [Libraries | GitHub Developer Guide](https://developer.github.com/v3/libraries/)
+
+#### The Bad:
+* Relies on the default branch, if a user changes this value the service does not account for edit actions (to be fair, a logical “or” condition in the action   comparison could account for this functionality). The feature was out of scope so I did not include it but likely would in a customer setting so they’re protected regardless of a change to default branch.)
+* Documentation in the README.md could benefit from more verbosity possibly images to provide more detailed examples or how to configure via UI for less advanced users. 
+* Yes, I rebased everything. Typically I would be more organized and thoughtful when making pr’s/commits in a production setting (e.g., not committing directly to master).  
+
+#### The ugly:
+* No error handling, no bubbling of a solution should an error occur
+* No logging mechanisms
+* No security (Google Cloud isn’t enforcing traffic restrictions and I’m not telling GitHub to provide any secrets to authenticate with)
+
 
 
 
